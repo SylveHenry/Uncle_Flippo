@@ -1,0 +1,211 @@
+.howtobuy {
+  padding: 6rem 0;
+  background-color: #2F323A;
+  color: #E8E6E3;
+}
+
+.howtobuyTitle {
+  font-family: 'AttackOnCourier', monospace;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #369bcb;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 3rem;
+}
+
+.imageContainer {
+  flex: 0 0 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 75%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.image:hover {
+  transform: scale(1.05);
+}
+
+.carouselSection {
+  flex: 0 0 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.carouselContainer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.carousel {
+  flex: 1;
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  background-color: rgba(86, 78, 88, 0.3);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.2),
+              0 5px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(54, 155, 203, 0.1);
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slideTitle {
+  font-family: 'AttackOnCourier', monospace;
+  font-size: 1.5rem;
+  color: #C17817;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.description {
+  font-family: 'OldNewspaper', Arial, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: center;
+  color: #E8E6E3;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.carouselButton {
+  background: none;
+  border: 2px solid #369bcb;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  color: #369bcb;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.carouselButton:hover {
+  color: #C17817;
+  border-color: #C17817;
+  transform: scale(1.1);
+}
+
+.indicators {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0.5rem 0;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #564E58;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.activeIndicator {
+  background-color: #369bcb;
+  transform: scale(1.2);
+}
+
+@media (max-width: 900px) {
+  .content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .carouselSection {
+    flex: 0 0 auto;
+    width: 100%;
+    order: 1;
+  }
+
+  .imageContainer {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 400px;
+    order: 2;
+  }
+
+  .image {
+    width: 60%;
+  }
+
+  .howtobuyTitle {
+    font-size: 2.5rem;
+  }
+
+  .carousel {
+    height: 250px;
+  }
+
+  .slideTitle {
+    font-size: 1.3rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .howtobuyTitle {
+    font-size: 2rem;
+  }
+
+  .carousel {
+    height: 300px;
+    padding: 1.5rem;
+  }
+
+  .carouselButton {
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
+  }
+
+  .image {
+    width: 50%;
+  }
+} 
