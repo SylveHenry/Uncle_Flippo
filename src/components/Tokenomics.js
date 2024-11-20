@@ -30,7 +30,7 @@ const TokenAllocation = () => (
 
 const Tokenomics = () => {
   return (
-    <section id="Tokenomics" className={styles.tokenomics}>
+    <section id="tokenomics" className={styles.tokenomics}>
       <div className="container">
         <h2 className={`section-title ${styles.tokenomicsTitle}`}>FLIPPONOMICS</h2>
         <div className={styles.info}>
@@ -58,4 +58,4 @@ const Tokenomics = () => {
   );
 };
 
-export default tokenomics;
+export default Tokenomics;
